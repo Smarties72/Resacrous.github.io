@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RésaCrous</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <img class="site-logo" src="logoRésaCrous.png" alt="RésaCrous">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a href="#produits">Nos produits</a>
+            <a href="#questions">Les Crous' Questions</a>
+            <a class="login-link" href="main.html">ma réservation</a>
+        </nav>
+        <a class="login-link" href="main.html">Se déconnecter</a>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <a id="trio" href="menu_trio.html">MENU TRIO</a>
+            <a href="plats_chaud.html">LES P'TITS RÉCHAUFFENT</a>
+            <a id="plaisirs" href="desserts.html">LES P'TITS PLAISIRS</a>
+        </nav>
+    </aside>
+    <main class="contenu">
+        <h2>1 sandwich OU quiche OU pasta-box + 2 fruits OU compotes OU moelleux (choco ou citron) =</h2>
+        <h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;LE MENU TRIO</h1>
+        <form action="" method="get">
+            <img src="sandwich.jpg" alt="sandwich">
+            <img src="moelleux-ker-cadelac.jpeg" alt="moelleux">
+            <img src="compote.jpg" alt="compote">
+            <img src="fruits.jpg" alt="fruits">
+            <br>
+            <select name="sandwich">
+                <option value="sandwich_jb">sandwich jambon-beurre</option>
+                <option value="sandwich_hc">sandwich houmous-crudités</option>
+                <option value="sandwich_t">sandwich thon</option>
+            </select>
+            +
+            <select name="dessert1">
+                <img src="" alt="moelleux_compote_fruit">
+                <option value="choco">moelleux chocolat</option>
+                <option value="citron">moelleux citron</option>
+                <option value="cpote">compote</option>
+                <option value="frt">fruit</option>
+            </select>
+            +
+            <select name="dessert2">
+                <img src="" alt="moelleux_compote_fruit">
+                <option value="choco">moelleux chocolat</option>
+                <option value="citron">moelleux citron</option>
+                <option value="cpote">compote</option>
+                <option value="frt">fruit</option>
+            </select>
+        </form>
+    </main>
+</body>
+</html>

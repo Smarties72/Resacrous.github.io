@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Se connecter - RésaCrous</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Arial, sans-serif;
+            --brand-color: #ff7b82;
+            --brand-color-dark: #e85f68;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            min-width: 320px;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            place-items: center;
+            background: #fff7f7;
+            color: var(--text-color);
+        }
+
+        .login-card {
+            width: min(100%, 420px);
+            padding: 36px;
+            border: 1px solid #f1e4e4;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 12px 36px rgb(75 30 30 / 9%);
+        }
+
+        .site-logo {
+            display: block;
+            width: 112px;
+            height: 112px;
+            margin: 0 auto 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin: 0 0 28px;
+            font-size: 26px;
+            text-align: center;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-field label {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .form-field input,
+        .form-field select {
+            width: 100%;
+            min-height: 48px;
+            padding: 0 14px;
+            border: 1px solid #cfc7c7;
+            border-radius: 10px;
+            background: #fff;
+            color: var(--text-color);
+            font: inherit;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus {
+            border-color: var(--brand-color-dark);
+            outline: 3px solid rgb(255 123 130 / 25%);
+        }
+
+        .submit-button {
+            min-height: 48px;
+            margin-top: 4px;
+            border: 0;
+            border-radius: 999px;
+            background: var(--brand-color);
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 160ms ease;
+        }
+
+        .submit-button:hover,
+        .submit-button:focus-visible {
+            background: var(--brand-color-dark);
+        }
+
+        .submit-button:focus-visible {
+            outline: 3px solid var(--brand-color-dark);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="login-card">
+        <img class="site-logo" src="logoRésaCrous.png" alt="RésaCrous">
+        <h1>Se connecter</h1>
+        <form class="login-form" id="login-form">
+            <div class="form-field">
+                <label for="username">Identifiant</label>
+                <input id="username" name="username" type="text" autocomplete="username">
+            </div>
+            <div class="form-field">
+                <label for="password">Mot de passe</label>
+                <input id="password" name="password" type="password" autocomplete="current-password">
+            </div>
+            <div class="form-field">
+                <label for="cafeteria">Cafétéria</label>
+                <select id="cafeteria" name="cafeteria" required>
+                    <option value="" selected disabled>Choisissez une cafétéria</option>
+                    <option value="vaurouze">Cafétéria des sciences</option>
+                    <option value="eve">Cafétéria Physique</option>
+                    <option value="campus">Cafétéria de l'IUT</option>
+                </select>
+            </div>
+            <button class="submit-button" type="submit">Se connecter</button>
+        </form>
+    </main>
+    <script>
+        document.querySelector("#login-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            window.location.href = "menu_trio.html";
+        });
+    </script>
+</body>
+</html>
